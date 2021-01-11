@@ -225,6 +225,72 @@
       ],
       "rating": 9,
       "id": 30
+    },
+    {
+      "id": 31
+    },
+    {
+      "title": "Тестовая книга по CSS",
+      "author": "Я",
+      "genres": [
+        "JS"
+      ],
+      "rating": 9,
+      "id": 32
+    },
+    {
+      "title": "Тестовая книга по CSS",
+      "author": "Я",
+      "genres": [
+        "JS"
+      ],
+      "rating": 9,
+      "id": 33
+    },
+    {
+      "title": "Тестовая книга по HTML",
+      "author": "Я",
+      "genres": [
+        "JS"
+      ],
+      "rating": 5,
+      "id": 34
+    },
+    {
+      "title": "Тестовая книга по CSS",
+      "author": "Я",
+      "genres": [
+        "JS"
+      ],
+      "rating": 9,
+      "id": 35
+    },
+    {
+      "title": "Тестовая книга по HTML",
+      "author": "Я",
+      "genres": [
+        "fggf"
+      ],
+      "rating": 5,
+      "id": 36
+    },
+    {
+      "title": "Тестовая книга по CSS",
+      "author": "Я",
+      "genres": [
+        "JS"
+      ],
+      "rating": 9,
+      "id": 37
+    },
+    {
+      "title": "Тестовая книга по HTML",
+      "author": "Я",
+      "genres": [
+        "fggf"
+      ],
+      "rating": 5,
+      "id": 38
     }
   ]
 }
