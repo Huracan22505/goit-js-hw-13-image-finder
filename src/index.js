@@ -44,6 +44,7 @@ function onLoadMore() {
 
 function appendCardMarkup(hits) {
   refs.gallery.insertAdjacentHTML('beforeend', cardTpl(hits));
+  window.scrollTo(0, document.documentElement.scrollHeight);
 }
 
 function clearGallery() {
