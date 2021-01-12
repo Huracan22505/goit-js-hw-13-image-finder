@@ -52,7 +52,6 @@ img {
 }
 
 .gallery .photo-card {
-  height: 450px;
   overflow: hidden;
 }
 
@@ -61,4 +60,16 @@ img {
   width: 100%;
   height: 200px;
   object-fit: cover;
+}
+
+.stats {
+  display: flex;
+}
+
+.stats-item {
+  display: flex;
+}
+
+.stats-item + .stats-item {
+  margin-left: 25px;
 }
