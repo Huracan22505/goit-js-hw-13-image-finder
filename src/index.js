@@ -16,7 +16,7 @@ const loadMoreBtn = new LoadMoreBtn({
 const imgFinderServise = new ImgFinderServise();
 
 refs.searchForm.addEventListener('submit', onSearch);
-loadMoreBtn.refs.button.addEventListener('click', onLoadMore);
+loadMoreBtn.refs.button.addEventListener('click', fetchHits);
 
 function onSearch(e) {
   e.preventDefault();
@@ -26,25 +26,28 @@ function onSearch(e) {
   loadMoreBtn.show();
   imgFinderServise.resetPage();
   clearGallery();
-
-  loadMoreBtn.disable();
-  imgFinderServise.fetchImg().then(hits => {
-    appendCardMarkup(hits);
-    loadMoreBtn.enable();
-  });
+  fetchHits();
 }
 
-function onLoadMore() {
+function fetchHits() {
   loadMoreBtn.disable();
   imgFinderServise.fetchImg().then(hits => {
-    appendCardMarkup(hits);
-    loadMoreBtn.enable();
+    if (hits.length < 12) {
+      appendCardMarkup(hits);
+      loadMoreBtn.hide();
+    } else {
+      appendCardMarkup(hits);
+      loadMoreBtn.enable();
+    }
   });
 }
 
 function appendCardMarkup(hits) {
   refs.gallery.insertAdjacentHTML('beforeend', cardTpl(hits));
-  window.scrollTo(0, document.documentElement.scrollHeight);
+  window.scrollTo({
+    top: document.documentElement.scrollHeight,
+    behavior: 'smooth',
+  });
 }
 
 function clearGallery() {
